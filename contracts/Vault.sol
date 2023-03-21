@@ -224,7 +224,7 @@ contract Vault is ReentrancyGuard, Ownable {
     }
 
     function setDailyPercent(uint256 _dailyPercent) external onlyOwner {
-        require(_dailyPercent >= 100 && _dailyPercent < 10000, "Vault: dailyPercent too small");
+        require(_dailyPercent >= 100 && _dailyPercent < 300, "Vault: dailyPercent too small");
 
         dailyPercent = _dailyPercent;
     }
